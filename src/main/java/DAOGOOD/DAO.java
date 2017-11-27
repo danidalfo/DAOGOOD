@@ -80,6 +80,8 @@ public abstract class DAO {
         StringBuffer sb = new StringBuffer("SELECT ");
         sb.append("* FROM");
         sb.append(this.getClass().getSimpleName());
+        sb.append(" WHERE id==");
+        sb.append(this.getId());
 
         return sb.toString();
     }
